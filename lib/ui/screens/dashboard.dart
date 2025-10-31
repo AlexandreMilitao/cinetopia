@@ -23,7 +23,10 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _screens.elementAt(_currentIndex),
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(16, 54, 16, 0),
+        child: _screens.elementAt(_currentIndex),
+      ),
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: _currentIndex,
           onTap: (value) => updateIndex(value),

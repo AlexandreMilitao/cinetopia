@@ -12,7 +12,7 @@ class Dashboard extends StatefulWidget {
 class _DashboardState extends State<Dashboard> {
   int _currentIndex = 0;
 
-  final List<Widget> _screens = <Widget>[SearchMovies(), Releases()];
+  final List<Widget> _screens = const <Widget>[SearchMovies(), Releases()];
 
   void updateIndex(int index) {
     setState(() {
@@ -23,7 +23,7 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF120326),
+      backgroundColor: const Color(0xFF120326),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(16, 54, 16, 0),
         child: _screens.elementAt(_currentIndex),

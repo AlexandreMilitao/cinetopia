@@ -12,5 +12,16 @@ class SearchMoviesViewmodel {
     return _moviesList;
   }
 
+  Future<List<Movie>> getMovie(String query) async {
+    if (query.isEmpty) {
+      _moviesList = await getPopularMoveis();
+    } else {
+      final SearchMoviesService service = SearchForMovie(query: query);
+      _moviesList = await service.getMovies();
+    }
+
+    return _moviesList;
+  }
+
   List<Movie> get moviesList => _moviesList;
 }

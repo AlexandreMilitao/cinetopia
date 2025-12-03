@@ -9,3 +9,7 @@ const requestHeader = {
   "accept": 'application/json',
   "Authorization": 'Bearer $apiKey'
 };
+
+const String moviePrefixUrl =
+    "https://api.themoviedb.org/3/search/movie?query=";
+const String movieFilterSulfix = "&include_adult=false&language=en-US&page=1";

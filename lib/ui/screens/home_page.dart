@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Ink(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(colors: [
             Color(0xFF000000),
             Color(0xFF1D0E44),
@@ -26,9 +26,9 @@ class HomePage extends StatelessWidget {
                   child: Image.asset("assets/logo.png"),
                 ),
                 Image.asset("assets/splash.png"),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 24),
-                  child: const Text(
+                const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 24),
+                  child: Text(
                     "O lugar ideal para buscar, salvar e organizar seus filmes favoritos",
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
                     textAlign: TextAlign.center,
@@ -37,8 +37,10 @@ class HomePage extends StatelessWidget {
                 PrimaryButton(
                   text: 'Quero Começar!',
                   icon: Icons.arrow_forward,
-                  onTap: () => Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Dashboard())),
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Dashboard())),
                 ),
               ],
             ),

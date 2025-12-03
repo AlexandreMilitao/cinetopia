@@ -13,3 +13,6 @@ const requestHeader = {
 const String moviePrefixUrl =
     "https://api.themoviedb.org/3/search/movie?query=";
 const String movieFilterSulfix = "&include_adult=false&language=en-US&page=1";
+
+const String movieByIdPrefixUrl = "https://api.themoviedb.org/3/movie/";
+const String movieByIdSufixUrl = "?language=en-US";
